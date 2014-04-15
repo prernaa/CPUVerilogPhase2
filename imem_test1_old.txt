@@ -1,0 +1,32 @@
+// This file is used to initialize I_memory
+// Test file for load and save instructions. No hazards will be created. 
+// Assembly
+// LW	R2, mem[R0+0] //load value from mem[0] to R2
+// LW   R3, mem[R0+1] //load value from mem[1] to R3
+// repeat some number of times to avoid hazards
+// SW  R2, mem[R0+3] // store value from R2 to mem[3]
+// Machine code in 16-bit Hex
+// 0007 9203
+// Continue instructions
+// LHB  R4 imm(0010 0010) //load the Highest Byte of R4 with 0010 0010
+// LLB  R5 imm(0011 0011) //load r4 with 0000 0000 0011 0011
+0000 8001
+0001 8200
+0002 8301
+0003 8401
+0004 8501
+0005 8601
+0006 8701
+0007 8801
+0008 9203
+0009 8701
+000A 8701
+000B 8701
+000C 8701
+000D 8701
+000E 0923
+000F A455
+0010 8A01
+0011 0916 
+0012 0758
+0013 B533

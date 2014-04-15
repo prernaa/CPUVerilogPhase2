@@ -1,4 +1,4 @@
-CPUVerilogPhase2
-================
+CPUVerilog
+==========
 
-CPUVerilog_Phase2
+16-Bit 5-Stage Pipelined CPU Implementation

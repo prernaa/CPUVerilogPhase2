@@ -1,0 +1,34 @@
+// This file is used to initialize I_memory
+//
+// Assembly
+// LW	R4, mem[R0+4]
+// LW	R5, mem[R0+5]
+// LW	R1, mem[R0+0]	// load 0 
+// LW	R2, mem[R0+1]	// load 1
+// ADD	R3, R1, R2	// additon
+// SW	R2, mem[R0+2]	// store the 2nd operand in mem[2]
+// SW	R3, mem[R0+3]	// store the addition in mem[3]
+// LOOP:
+// LW	R1, mem[R0+2]	// load 1st operand
+// LW	R2, mem[R0+3]	// load 2nd operand
+// ADD	R3, R1, R2	// additon
+// SW	R2, mem[R0+2]	// store the 2nd operand in mem[2]
+// SW	R3, mem[R0+3]	// store the addition in mem[3]
+// SUB	R4, R4, R5
+// B	EQ, (PC+1)+(-7)
+// 
+// Machine code in 16-bit Hex
+0000 8404
+0001 8505
+0002 8100
+0003 8201
+0004 0312
+0005 9202
+0006 9303
+0007 8103
+0008 8203
+0009 0312
+000A 9202
+000B 9303
+000C 1445
+000D C0F9

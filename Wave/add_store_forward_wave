@@ -1,0 +1,56 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /project_tb/CPU/clk
+add wave -noupdate -radix hexadecimal /project_tb/CPU/IF_ID/inst_curr
+add wave -noupdate -radix hexadecimal -childformat {{{/project_tb/CPU/RF/regdata[0]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[1]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[2]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[3]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[4]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[5]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[6]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[7]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[8]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[9]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[10]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[11]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[12]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[13]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[14]} -radix hexadecimal} {{/project_tb/CPU/RF/regdata[15]} -radix hexadecimal}} -subitemconfig {{/project_tb/CPU/RF/regdata[0]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[1]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[2]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[3]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[4]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[5]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[6]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[7]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[8]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[9]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[10]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[11]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[12]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[13]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[14]} {-height 15 -radix hexadecimal} {/project_tb/CPU/RF/regdata[15]} {-height 15 -radix hexadecimal}} /project_tb/CPU/RF/regdata
+add wave -noupdate -radix hexadecimal {/project_tb/CPU/DMem/memory[4]}
+add wave -noupdate -radix hexadecimal /project_tb/CPU/DMem/data_in
+add wave -noupdate -radix hexadecimal /project_tb/CPU/DMem/addr
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/rf_waddr_exmem
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/rf_waddr_memwb
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/inst_curr_IDEX_7_4_rs
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/inst_curr_IDEX_3_0_rt
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/inst_curr_IDEX_11_8_rd
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/rf_wen_exmem
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/rf_wen_memwb
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/mem2reg_memwb
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/dmem_wen_idex
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/forwardA
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/forwardB
+add wave -noupdate -radix hexadecimal /project_tb/CPU/f_unit1/rdata2_sw_fcontrol
+add wave -noupdate -radix hexadecimal /project_tb/CPU/forward_sw_rdata2/in0
+add wave -noupdate -radix hexadecimal /project_tb/CPU/forward_sw_rdata2/in1
+add wave -noupdate -radix hexadecimal /project_tb/CPU/forward_sw_rdata2/in2
+add wave -noupdate -radix hexadecimal /project_tb/CPU/forward_sw_rdata2/select
+add wave -noupdate -radix hexadecimal /project_tb/CPU/forward_sw_rdata2/out
+add wave -noupdate -radix hexadecimal /project_tb/CPU/EX_MEM/aluout_exmem
+add wave -noupdate -radix hexadecimal /project_tb/CPU/mem2regMUX/in1
+add wave -noupdate -radix hexadecimal /project_tb/CPU/mem2regMUX/in0
+add wave -noupdate -radix hexadecimal /project_tb/CPU/mem2regMUX/out
+add wave -noupdate -radix hexadecimal /project_tb/CPU/mem2regMUX/select
+add wave -noupdate -radix hexadecimal /project_tb/CPU/S7/in0
+add wave -noupdate -radix hexadecimal /project_tb/CPU/S7/in1
+add wave -noupdate -radix hexadecimal /project_tb/CPU/S7/select
+add wave -noupdate -radix hexadecimal /project_tb/CPU/S7/out
+add wave -noupdate -radix hexadecimal /project_tb/CPU/pcORwdataMUX/in0
+add wave -noupdate -radix hexadecimal /project_tb/CPU/pcORwdataMUX/in1
+add wave -noupdate -radix hexadecimal /project_tb/CPU/pcORwdataMUX/select
+add wave -noupdate -radix hexadecimal /project_tb/CPU/pcORwdataMUX/out
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {245 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 212
+configure wave -valuecolwidth 40
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {218 ps} {318 ps}

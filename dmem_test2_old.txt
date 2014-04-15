@@ -1,0 +1,19 @@
+// This file is used to initialize D_memory
+//
+// brief of slots in D_memory
+// mem[0]: value to load into R2 (decimal 10)
+// mem[1]: value to load into R3 (decimal 11)
+// mem[2]: dummy value that remains unchanged
+// mem[3]: value initialised as dummy, but later overwritten to decimal 10
+// mem[4]: dummy value that remains unchanged
+// mem[5]: dummy value that remains unchanged
+//
+// Data in Hex starting from mem[0]
+0000 000A
+0001 000B
+0002 0003
+0003 0004
+0004 000A
+0005 0001
+0006 0001
+0007 0003
